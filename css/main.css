@@ -13,5 +13,15 @@ h1 {
 .grid {
   border: solid 1px #c2d3e7;
   box-sizing: border-box;
-  background-image: url("../images/bg.jpg");
+  position: relative;
+}
+.grid img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.grid > .back-image {
+  z-index: 1000;
 }

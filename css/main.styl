@@ -13,5 +13,13 @@ h1
 .grid
   border: solid 1px #C2D3E7;
   box-sizing: border-box;
-  background-image: url("../images/bg.jpg");
+  position: relative
+  img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+  > .back-image
+    z-index: 1000
 
