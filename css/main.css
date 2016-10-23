@@ -1,6 +1,9 @@
 h1 {
   margin: 50px auto;
   width: 240px;
+  font-family: Angelina;
+  color: #b7dcb8;
+  font-size: 50px;
 }
 #container {
   width: 900px;
@@ -23,5 +26,57 @@ h1 {
   height: 100%;
 }
 .grid > .back-image {
+  opacity: 0.7;
+}
+.alert {
+  display: none;
+  color: #6b6b6b;
+  opacity: 1;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 450px;
+  min-height: 200px;
+  top: 50%;
+  left: calc(50% - 225px);
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
   z-index: 1000;
+  transition: all 0.7s ease;
+  font-family: Bad Script;
+}
+.alert h2 {
+  font-family: Bad script;
+  margin: 20px 0 5px 0;
+}
+.alert .alert-content {
+  display: block;
+  font-size: 25px;
+  margin: 0;
+  padding: 20px 20px 0px 20px;
+}
+.alert .alert-btn-container {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 30px 0 10px 0;
+}
+.alert .alert-btn-container button {
+  display: inline-block;
+  margin: 10px 10px;
+  padding: 10px 30px 10px 30px;
+  border: 2px solid #6b6b6b;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.alert .alert-btn-container .confirm {
+  color: #91c8ff;
+  border-color: #91c8ff;
+  background-color: transparent;
 }

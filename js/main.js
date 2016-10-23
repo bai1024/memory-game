@@ -3,7 +3,7 @@ var width = 6
 var height = 4
 var images = []
 var $click1
-var duration = 1000
+var duration = 500
 var noClick = false
 
 function createGrid(){
@@ -36,6 +36,7 @@ function flip(){
   })
 
   $container.on("click", function(evt){
+    NProgress.start()
     if (noClick) return
     var $target = $(evt.target)
     if($target.hasClass("back-image")){
@@ -43,6 +44,8 @@ function flip(){
       var $frontImage = $target.siblings()
       if($click1){
         if($click1.attr("src")=== $frontImage.attr("src")){
+          $click1.addClass("match")
+          $frontImage.addClass("match")
           $click1 = null
         } else {
           noClick = true
@@ -57,8 +60,14 @@ function flip(){
         $click1 = $target.siblings()
       }
     }
+    if ($('.match').length === 2){
+      $(".alert").css("display","flex")
+    }
   })
 }
 
+$(".confirm").click(function(){
+  window.location.reload() 
+})
 createGrid()
 flip()
