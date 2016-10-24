@@ -23,7 +23,7 @@
     speed: 20,
     trickle: true,
     trickleRate: 0.02,
-    trickleSpeed: 8000,
+    trickleSpeed:600,
     showSpinner: true,
     barSelector: '[role="bar"]',
     spinnerSelector: '[role="spinner"]',

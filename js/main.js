@@ -5,6 +5,7 @@ var images = []
 var $click1
 var duration = 500
 var noClick = false
+var start = false
 
 function createGrid(){
   const gridWidth = $container.width() / width
@@ -35,9 +36,25 @@ function flip(){
     $('.grid').eq(index).append($frontImage, $backImage)
   })
 
+  $("#button").on("click",function(){
+    $(".back-image").css("opacity","0")
+    setTimeout(() => {
+      $(".back-image").css("opacity", "1")
+      start = true
+    },7000)
+  }) 
+
   $container.on("click", function(evt){
-    NProgress.start()
+    if(!start)return
+     NProgress.start()
     if (noClick) return
+    setTimeout(() => {
+      if($(".length").length < 12){
+        $(".alert.fail").css("display","flex")
+        $("#button").css("display","none")
+        start = false
+      }
+    }, 56000)
     var $target = $(evt.target)
     if($target.hasClass("back-image")){
       $target.hide()
@@ -60,8 +77,9 @@ function flip(){
         $click1 = $target.siblings()
       }
     }
-    if ($('.match').length === 2){
-      $(".alert").css("display","flex")
+    if ($('.match').length === 24){
+      $(".alert.success").css("display","flex")
+      start = false
     }
   })
 }

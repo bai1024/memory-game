@@ -26,7 +26,7 @@ h1 {
   height: 100%;
 }
 .grid > .back-image {
-  opacity: 0.7;
+  opacity: 1;
 }
 .alert {
   display: none;
@@ -37,7 +37,7 @@ h1 {
   position: relative;
   width: 450px;
   min-height: 200px;
-  top: -330px;
+  top: -352px;
   margin: auto;
   background-color: #fff;
   border: 1px solid #fff;
@@ -79,4 +79,18 @@ h1 {
   color: #91c8ff;
   border-color: #91c8ff;
   background-color: transparent;
+}
+section {
+  width: 125px;
+  margin: 40px auto;
+}
+#button {
+  color: #f08280;
+  border: dashed 5px #41403e;
+  padding: 1rem 1rem;
+  letter-spacing: 1px;
+  font-size: 40px;
+  background: transparent;
+  font-family: 'Patrick Hand SC', cursive;
+  outline: none;
 }

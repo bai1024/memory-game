@@ -9,13 +9,26 @@
 <body>
   <h1>Memory Game</h1>
   <div id="container"></div>
-  <div class="alert">
+  <section>
+    <button id="button">Play!</button>
+  </section>
+  <div class="alert success">
       <h2>Congratulations!</h2>
       <div class="alert-content">yo! You have won the game!</div>
       <div class="alert-btn-container">
         <button class="confirm">Replay</button>
       </div>
   </div>
+  <div class="alert fail">
+      <h2>Oops!</h2>
+      <div class="alert-content">Sorry, you lose the game, let's do it again!</div>
+      <div class="alert-btn-container">
+        <button class="confirm">Replay</button>
+      </div>
+  </div>
+
+
+
   <script src="js/jquery-3.1.1.min.js"></script>
   <script src="js/lodash.js"></script>
   <script src="js/main.js"></script>
