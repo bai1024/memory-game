@@ -54,7 +54,7 @@ function flip(){
         $("#button").css("display","none")
         start = false
       }
-    }, 56000)
+    }, 65000)
     var $target = $(evt.target)
     if($target.hasClass("back-image")){
       $target.hide()
