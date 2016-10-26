@@ -1,6 +1,8 @@
+@font-face {
+  font-family: Angelina;
+}
 h1 {
-  margin: 50px auto;
-  width: 240px;
+  test-align: center;
   font-family: Angelina;
   color: #b7dcb8;
   font-size: 50px;
