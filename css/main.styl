@@ -1,20 +1,35 @@
-@font-face{
-  font-family:'Patrick Hand SC', cursive;
-  src:url(font/PatrickHandSC-Regular.ttf)
-}
+*
+  font-family:'Patrick Hand SC', cursive
+
+body
+  background:url(../images/background.jpg)
+  background-size: cover
+
 h1 
   text-align: center
-  font-family: Angelina
   color: #B7DCB8
   font-size: 50px
 
+.app
+  display:flex
+  
 #container 
   width: 900px;
   height:440px
-  margin: auto;
+  margin-left: 10%
   display: flex
   flex-wrap: wrap
   border: solid 1px #C2D3E7
+
+.introduce
+  margin-left:5%
+  border: solid 2px #41403E;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  padding: 20px;
+  box-sizing: border-box;
+  align-self: center;
+  text-align: center;
+
 
 .grid
   border: solid 1px #C2D3E7;
@@ -45,9 +60,7 @@ h1
   border-radius: 5px;
   z-index: 1000;
   transition: all 0.7s ease;
-  font-family:Bad Script
   h2
-    font-family: Bad script
     margin: 20px 0 5px 0
   .alert-content
     display: block;
@@ -75,18 +88,16 @@ h1
       color: #91c8ff;
       border-color: #91c8ff;
       background-color: transparent;
-section
-  width:125px
-  margin: 40px auto
+
 #button
   color: #F08280
   border: dashed 5px #41403E;
-  padding: 1rem 1rem;
+  padding: 5px 10px;
   letter-spacing: 1px;
   font-size: 40px;
   background: transparent;
-  font-family: 'Patrick Hand SC', cursive
   outline: none
-
+  cursor:pointer
+    
   
 

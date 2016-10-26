@@ -1,20 +1,34 @@
-@font-face {
+* {
   font-family: 'Patrick Hand SC', cursive;
-  src: url("font/PatrickHandSC-Regular.ttf");
+}
+body {
+  background: url("../images/background.jpg");
+  background-size: cover;
 }
 h1 {
   text-align: center;
-  font-family: 'Patrick Hand SC', cursive;
   color: #b7dcb8;
   font-size: 50px;
+}
+.app {
+  display: flex;
 }
 #container {
   width: 900px;
   height: 440px;
-  margin: auto;
+  margin-left: 10%;
   display: flex;
   flex-wrap: wrap;
   border: solid 1px #c2d3e7;
+}
+.introduce {
+  margin-left: 5%;
+  border: solid 2px #41403e;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  padding: 20px;
+  box-sizing: border-box;
+  align-self: center;
+  text-align: center;
 }
 .grid {
   border: solid 1px #c2d3e7;
@@ -47,10 +61,8 @@ h1 {
   border-radius: 5px;
   z-index: 1000;
   transition: all 0.7s ease;
-  font-family: Bad Script;
 }
 .alert h2 {
-  font-family: Bad script;
   margin: 20px 0 5px 0;
 }
 .alert .alert-content {
@@ -83,17 +95,13 @@ h1 {
   border-color: #91c8ff;
   background-color: transparent;
 }
-section {
-  width: 125px;
-  margin: 40px auto;
-}
 #button {
   color: #f08280;
   border: dashed 5px #41403e;
-  padding: 1rem 1rem;
+  padding: 5px 10px;
   letter-spacing: 1px;
   font-size: 40px;
   background: transparent;
-  font-family: 'Patrick Hand SC', cursive;
   outline: none;
+  cursor: pointer;
 }

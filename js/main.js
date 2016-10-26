@@ -30,7 +30,7 @@ function flip(){
   var bgSrc = "images/" + "bg" +".jpg"
   images = _.shuffle(images)
 
-  images.forEach((src,index) =>{
+    images.forEach((src,index) =>{
     var $frontImage = $("<img/>").attr("src", src).addClass("front-image")
     var $backImage = $("<img/>").attr("src",bgSrc).addClass("back-image")
     $('.grid').eq(index).append($frontImage, $backImage)
