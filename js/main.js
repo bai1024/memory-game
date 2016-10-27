@@ -6,6 +6,7 @@ var $click1
 var duration = 500
 var noClick = false
 var start = false
+var $div = $("<div/>")
 
 function createGrid(){
   const gridWidth = $container.width() / width
@@ -13,10 +14,10 @@ function createGrid(){
   for (var i = 0; i < width; i++){
     for (var j = 0; j < height; j++){
       var $div = $("<div/>")
-        .addClass("grid")
-        .width(gridWidth)
-        .height(gridHeight)
-        .appendTo($container)
+          .addClass("grid")
+          .width(gridWidth)
+          .height(gridHeight)
+          .appendTo($container)
     }
   }
 }
@@ -50,6 +51,7 @@ function flip(){
     if (noClick) return
     setTimeout(() => {
       if($(".length").length < 12){
+        $(".alertBoard").css("display","block")
         $(".alert.fail").css("display","flex")
         $("#button").css("display","none")
         start = false
@@ -78,6 +80,7 @@ function flip(){
       }
     }
     if ($('.match').length === 24){
+      $(".alertBoard").css("display","block")
       $(".alert.success").css("display","flex")
       start = false
     }
@@ -85,7 +88,13 @@ function flip(){
 }
 
 $(".confirm").click(function(){
-  window.location.reload() 
+  $("#container > div").remove()
+  $(".alert").css("display","none")
+  $(".alertBoard").css("display","none")
+  $("#button").css("display","inline-block")
+  NProgress.done()
+  createGrid()
+  flip() 
 })
 createGrid()
 flip()
