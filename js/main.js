@@ -42,7 +42,7 @@ function flip(){
     setTimeout(() => {
       $(".back-image").css("opacity", "1")
       start = true
-    },7000)
+    },6000)
   }) 
 
   $container.on("click", function(evt){
