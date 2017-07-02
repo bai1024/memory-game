@@ -1,17 +1,21 @@
-## memory game
+# memory game
+
+[Online Demo](https://dingdingbai.github.io/memory-game/)
+
 <p align="center">
-    <img src="http://ok7n02kz6.bkt.clouddn.com/FjgSjZE1scT5TNwSpJZm0SyUHvTs.png" alt="images">
+
+ <img src="http://ok7n02kz6.bkt.clouddn.com/FjgSjZE1scT5TNwSpJZm0SyUHvTs.png">
+
 </p> 
 
-### 主要功能
-- 点击开始按钮，在限定时间内记住图片位置。
-- 在限定时间内找出配对图片
-- 游戏提示：失败或者成功时均会有弹框提示
+## Features
 
-### 实现过程
-- 动态生成网格，图片随机插入各网格中
-- 设置记忆时间，到点后所有图片翻面
-- 点击图片翻面，判断翻开的两个图片是否相同，在这里判断的是图片的属性是否相同
-  - 相同：图片保持正面向上，分数增加
-  - 不相同： 图片翻转
-- 在限定时间内：统计匹配数量，如果匹配数量达到规定的数字则成功，否则失败
+- 限定时间记忆图片。
+
+- 在限定时间内找出配对图片。
+
+  相同图片翻开，不同图片图片翻转回去。
+
+- 游戏提示。
+
+  失败或者成功时均会有弹框提示。

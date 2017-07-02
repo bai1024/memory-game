@@ -48,15 +48,22 @@ function flip(){
   $container.on("click", function(evt){
     if(!start)return
      NProgress.start()
+      NProgress.inc(0.01)
+      NProgress.configure(
+      {
+        showSpinner:false
+      }
+      )
     if (noClick) return
     setTimeout(() => {
+      NProgress.done()
       if($(".length").length < 12){
         $(".alertBoard").css("display","block")
         $(".alert.fail").css("display","flex")
         $("#button").css("display","none")
         start = false
       }
-    }, 65000)
+    }, 60000)
     var $target = $(evt.target)
     if($target.hasClass("back-image")){
       $target.hide()
